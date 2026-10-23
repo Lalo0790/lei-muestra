@@ -1,0 +1,97 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow">
+<title>Assistant demo | Lei Fashion México</title><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet"><style>
+:root{--d:#1c1c1c;--r:#b9777d;--l:#f4f5f7;--bg:#0b0f17}*{box-sizing:border-box}html,body{height:100%}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,sans-serif;background:radial-gradient(circle at 20% 10%,#3a2a26,transparent 45%),var(--bg);color:#fff}
+.c{background:#ffe066;color:#5c4400;font-size:.68rem;font-weight:700;padding:1px 5px;border-radius:4px;white-space:nowrap}
+.stage{display:flex;align-items:center;justify-content:center;gap:56px;min-height:100%;padding:24px}
+.side{max-width:400px}.side h1{font-size:2.6rem;line-height:1.08;margin:10px 0 14px}.side h1 em{color:var(--r);font-style:normal}.side p{opacity:.8}
+.kick{display:inline-block;background:#b9777d22;color:#e8b4b8;border:1px solid #b9777d55;padding:5px 12px;border-radius:30px;font-size:.8rem;font-weight:700}
+.ben{list-style:none;padding:0;margin:22px 0}.ben li{display:flex;gap:12px;align-items:center;background:#ffffff0d;border:1px solid #ffffff1a;border-radius:14px;padding:11px 14px;margin-bottom:9px}.ben i{font-style:normal;font-size:1.3rem;width:38px;height:38px;display:grid;place-items:center;background:var(--r);border-radius:10px;flex:none}.ben b{display:block}.ben span{font-size:.85rem;opacity:.7}
+.by{font-size:.8rem;opacity:.55}
+.phone{width:390px;height:800px;max-height:calc(100vh - 48px);background:#000;border-radius:46px;padding:12px;box-shadow:0 30px 80px #000a,0 0 0 2px #333 inset;flex:none}
+.scr{height:100%;border-radius:36px;overflow:hidden;display:flex;flex-direction:column;background:#efe9e1}
+.demo{background:#ffe066;color:#3d2e00;font-size:.75rem;font-weight:700;text-align:center;padding:6px 10px;line-height:1.3}.demo small{display:block;font-weight:500;opacity:.8}
+.top{background:var(--d);display:flex;align-items:center;gap:10px;padding:10px 12px}
+.av{width:40px;height:40px;border-radius:50%;background:var(--r);display:grid;place-items:center;flex:none}
+.top b{font-size:.98rem;display:block}.top small{font-size:.75rem;color:#86efac}.top .rs{margin-left:auto;background:#ffffff1a;border:0;color:#fff;font:inherit;font-size:.72rem;padding:6px 10px;border-radius:20px;cursor:pointer}
+.chat{flex:1;overflow-y:auto;padding:14px 10px;background-color:#ece5dc;background-image:radial-gradient(#0000000a 1px,transparent 1px);background-size:14px 14px}
+.day{text-align:center;margin:0 0 10px}.day span{background:#fff;color:#555;font-size:.7rem;padding:4px 10px;border-radius:8px;box-shadow:0 1px 1px #0001}
+.m{max-width:84%;padding:7px 10px 5px;border-radius:12px;margin:4px 0;font-size:.9rem;line-height:1.4;color:#111;box-shadow:0 1px 1px #0002;animation:pop .25s ease;position:relative;word-wrap:break-word}
+.m.b{background:#fff;border-top-left-radius:3px}.m.u{background:#f3e1df;margin-left:auto;border-top-right-radius:3px}
+.t{display:block;text-align:right;font-size:.64rem;color:#777;margin-top:2px}.tk{color:#3b82f6;margin-left:3px}
+@keyframes pop{from{opacity:0;transform:translateY(6px) scale(.97)}to{opacity:1;transform:none}}
+.typing{background:#fff;display:inline-flex;gap:4px;padding:12px 14px;border-radius:12px;border-top-left-radius:3px;margin:4px 0}.typing i{width:7px;height:7px;border-radius:50%;background:#999;animation:bl 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes bl{0%,60%,100%{opacity:.3;transform:none}30%{opacity:1;transform:translateY(-3px)}}
+.cars{display:flex;gap:8px;overflow-x:auto;margin:6px 0;padding-bottom:4px}.car{flex:none;width:200px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 2px #0002;color:#111;animation:pop .3s}
+.car svg{display:block;width:100%}.car div{padding:8px 10px;font-size:.8rem}.car b{display:block;font-size:.9rem}.car .p{color:var(--r);font-weight:800}
+.card{background:#fff;border-radius:12px;overflow:hidden;max-width:88%;margin:6px 0;box-shadow:0 1px 2px #0002;color:#111;animation:pop .3s}.card h4{margin:0;background:var(--d);color:#fff;padding:9px 12px;font-size:.88rem}.card h4 em{color:#e8b4b8;font-style:normal}
+.card dl{margin:0;padding:8px 12px;font-size:.82rem;display:grid;grid-template-columns:auto 1fr;gap:4px 10px}.card dt{color:#777}.card dd{margin:0;font-weight:600}
+.card .ok{background:#dcfce7;color:#166534;font-size:.78rem;padding:7px 12px;font-weight:600}
+.ph{display:flex;gap:4px}.photo{width:110px;height:82px;border-radius:8px;font-size:.68rem!important;background:linear-gradient(135deg,#374151,#1c1c1c);display:grid;place-items:center;color:#fff;font-size:.75rem;margin-bottom:3px}
+.qr{display:flex;flex-wrap:wrap;gap:6px;padding:8px 10px;background:#f7f3ee;border-top:1px solid #0001;max-height:40%;overflow-y:auto}.qr:empty{display:none}
+.qr button{font:inherit;font-size:.84rem;background:#fff;color:var(--d);border:1.5px solid var(--r);padding:7px 12px;border-radius:20px;cursor:pointer;font-weight:600;animation:pop .25s}.qr button:hover{background:var(--r);color:#fff}.qr button.alt{border-color:#9ca3af;color:#555}
+.in{display:flex;gap:8px;padding:8px 10px 12px;background:#f7f3ee}.in input{flex:1;font:inherit;font-size:.9rem;border:0;border-radius:22px;padding:10px 14px;outline:none;color:#111}.in button{width:42px;height:42px;border-radius:50%;border:0;background:var(--r);color:#fff;font-size:1.1rem;cursor:pointer}
+.mob{display:none}
+@media(max-width:900px){.side{display:none}.stage{padding:0}.phone{width:100%;height:100vh;height:100dvh;max-height:none;border-radius:0;padding:0;box-shadow:none}.scr{border-radius:0}}
+.side h1{font-family:"Playfair Display",Georgia,serif;font-weight:500}.car svg{background:#f3e7e1}</style></head><body>
+<div class="stage">
+<div class="side"><span class="kick">INTERACTIVE DEMO · DEMO INTERACTIVA</span><h1>An assistant that takes <em>preorders</em> while you work</h1>
+<p>This is how the WhatsApp assistant of <b>Lei Fashion México</b> could answer customers. Try it on the phone 👉<br><i style="opacity:.7">Así contestaría su asistente de WhatsApp. Pruébelo en el teléfono.</i></p>
+<ul class="ben"><li><i>🕑</i><div><b>Answers 24/7 · Responde 24/7</b><span>Also at night and on weekends.</span></div></li>
+<li><i>🛍️</i><div><b>Shows new arrivals · Muestra novedades</b><span>Customers see styles, sizes and colors.</span></div></li>
+<li><i>📝</i><div><b>Organizes preorders · Ordena apartados</b><span>Each order with a number and all details.</span></div></li>
+<li><i>📦</i><div><b>Order tracking · Seguimiento</b><span>Customers check their arrival date.</span></div></li>
+<li><i>👤</i><div><b>Hands off to a person · Pasa a una persona</b><span>Your team closes the sale.</span></div></li></ul>
+<p class="by">Illustrative example prepared by Teacher Lalo. Texts, prices and data are adjusted to your business.</p></div>
+<div class="phone"><div class="scr">
+<div class="demo">Demo · Example of your WhatsApp assistant<small>Ejemplo: productos, precios y datos son ilustrativos</small></div>
+<div class="top"><div class="av"><b style="font-family:Georgia,serif;font-size:1.1rem">L</b></div>
+<div><b>Lei Fashion México</b><small id="st">online</small></div><button class="rs" onclick="reset()">↺ Restart</button></div>
+<div class="chat" id="chat"></div><div class="qr" id="qr"></div>
+<form class="in" id="f"><input id="txt" placeholder="Type a message… / Escribe…" autocomplete="off"><button aria-label="Send">➤</button></form>
+</div></div></div>
+<script>
+const FAST=location.search.includes('fast');let LG='en';const T=(e,s)=>LG=='en'?e:s;const C=()=>'<span class="c">['+T('confirm','confirmar')+']</span>';
+const chat=document.getElementById('chat'),qr=document.getElementById('qr'),st=document.getElementById('st');
+let S={},busy=false,expect=null,q=Promise.resolve();
+const now=()=>new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});
+const sleep=ms=>new Promise(r=>setTimeout(r,FAST?5:ms));const down=()=>chat.scrollTop=chat.scrollHeight;
+function add(html,cls){const d=document.createElement('div');d.className='m '+cls;d.innerHTML=html+`<span class="t">${now()}${cls=='u'?'<span class="tk">✓✓</span>':''}</span>`;chat.appendChild(d);down();return d}
+function raw(html){const d=document.createElement('div');d.innerHTML=html;chat.appendChild(d.firstElementChild);down()}
+async function bot(...ms){for(const m of ms){const t=document.createElement('div');t.className='typing';t.innerHTML='<i></i><i></i><i></i>';chat.appendChild(t);st.textContent=T('typing…','escribiendo…');down();
+ await sleep(Math.min(500+(typeof m=='string'?m.length*12:400),1600));t.remove();st.textContent='online';typeof m=='string'?add(m,'b'):raw(m.html);await sleep(250)}}
+function opts(list,ex){qr.innerHTML='';expect=ex||null;list.forEach(o=>{const[l,fn,alt]=Array.isArray(o)?o:[o,null];const b=document.createElement('button');b.type='button';b.textContent=l;if(alt)b.className='alt';b.onclick=()=>pick(l,fn);qr.appendChild(b)});down()}
+function pick(l,fn){if(busy)return;qr.innerHTML='';add(esc(l),'u');run(()=>(fn||expect)(l))}
+function run(f){busy=true;q=q.then(f).catch(e=>console.error(e)).finally(()=>busy=false)}
+const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const END=()=>[[T('🏠 Back to menu','🏠 Volver al menú'),()=>menu(true)],[T('↺ Restart demo','↺ Reiniciar demo'),()=>reset(),1]];
+const folio=p=>p+'-'+Math.floor(1000+Math.random()*9000);
+function summary(title,rows,ok){return{html:`<div class="card"><h4>${title}</h4><dl>${rows.map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl><div class="ok">${ok}</div></div>`}}
+const SH={dress:c=>`<path d="M85 40h30l6 22-8 8 30 80H57l30-80-8-8z" fill="${c}"/>`,top:c=>`<path d="M70 50l20-12h20l20 12 18 26-16 10-10-14v74H78V72L68 86 52 76z" fill="${c}"/>`,
+coat:c=>`<path d="M78 40h44l22 18 8 74-16 2-6-60 4 78H66l4-78-6 60-16-2 8-74z" fill="${c}"/><path d="M100 70v82" stroke="#5a4636" stroke-width="2"/>`,bag:c=>`<path d="M70 70h60l8 76H62z" fill="${c}"/><path d="M82 70q0-28 18-28t18 28" stroke="${c}" stroke-width="5" fill="none"/>`};
+const PR=[['dress','#1c1c1c','Midi dress','Vestido midi'],['top','#e8b4b8','Knit top','Top tejido'],['coat','#c8a98b','Long coat','Abrigo largo'],['bag','#5a4636','Shoulder bag','Bolsa de hombro']];
+const svg=(k,c)=>`<svg viewBox="0 0 200 170"><circle cx="100" cy="95" r="66" fill="#fff8"/>${SH[k](c)}<rect x="8" y="8" width="58" height="20" rx="6" fill="#ffe066"/><text x="37" y="22" font-size="11" font-weight="700" text-anchor="middle" fill="#5c4400" font-family="sans-serif">Example</text></svg>`;
+const cards=()=>({html:`<div class="cars">${PR.map(([k,c,e,s])=>`<div class="car">${svg(k,c)}<div><b>${T(e,s)}</b>${T('Preorder','Preventa')} · ${k=='bag'?T('One size','Talla única'):'S · M · L · XL'}<br><span class="p">$ ${T('Example','Ejemplo')}</span></div></div>`).join('')}</div>`});
+const MENU=()=>[[T('🛍️ See new arrivals','🛍️ Ver novedades'),nuevos],[T('📝 Make a preorder','📝 Hacer un apartado'),apartar],[T('📦 Track my preorder','📦 Rastrear mi apartado'),rastrear],[T('🏷️ Wholesale prices','🏷️ Precios de mayoreo'),mayoreo],[T('📍 Location & hours','📍 Ubicación y horario'),ubic],[T('👤 Talk to a person','👤 Hablar con una persona'),persona]];
+async function menu(back){S={};await bot(back?T('What else can I help you with? 😊','¿En qué más le puedo ayudar? 😊'):T('How can I help you today? Choose an option or type 👇','¿En qué le puedo ayudar hoy? Elija una opción o escriba 👇'));opts(MENU())}
+async function start(){LG='en';chat.innerHTML='<div class="day"><span>Today · Hoy</span></div>';await bot('Hi! 👋 Welcome to <b>Lei Fashion México</b>.<br>¡Hola! Bienvenido(a) a <b>Lei Fashion México</b>.','Please choose your language · Elija su idioma');
+ opts([['🇬🇧 English',async()=>{LG='en';await bot("Great! I'm the virtual assistant and I'll help you right away.");await menu()}],['🇲🇽 Español',async()=>{LG='es';await bot('¡Perfecto! Soy el asistente virtual y le atiendo al momento.');await menu()}]])}
+function reset(){qr.innerHTML='';run(start)}
+async function nuevos(){await bot(T('These are our new arrivals 👇 (examples)','Estas son nuestras novedades 👇 (ejemplos)'),cards(),T('Would you like to reserve one?','¿Le gustaría apartar alguna?'));opts([[T('📝 Make a preorder','📝 Hacer un apartado'),apartar],...END()])}
+async function apartar(){await bot(T('Lovely! 🛍️ Which item would you like?','¡Con gusto! 🛍️ ¿Qué prenda le interesa?'));opts(PR.map(p=>T(p[2],p[3])),async p=>{S.p=p;const bag=/bag|bolsa/i.test(p);
+ const color=async s=>{S.s=s;await bot(T('Which color?','¿Qué color?'));opts([T('Black','Negro'),T('Blush pink','Rosa palo'),T('Beige','Beige'),T('Brown','Café')],async c=>{S.c=c;
+ await bot(T('How many pieces?','¿Cuántas piezas?'));opts(['1','2','3',T('More (wholesale)','Más (mayoreo)')],async n=>{if(/More|Más/.test(n))return mayoreo();S.n=n;
+ await bot(T('Done! Here is your preorder ✅','¡Listo! Aquí está su apartado ✅'),summary(T('📝 Preorder','📝 Apartado')+' · <em>'+(S.f=folio('LF'))+'</em>',[[T('Item','Prenda'),esc(S.p)],[T('Size','Talla'),esc(S.s)],['Color',esc(S.c)],[T('Quantity','Cantidad'),esc(S.n)],[T('Price','Precio'),'$ '+T('Example','Ejemplo')],[T('Deposit','Anticipo'),'50% '+C()],[T('Estimated arrival','Llegada estimada'),T('2–3 weeks','2–3 semanas')+' '+C()]],T('Our team will confirm and send payment details here.','Nuestro equipo le confirma y le manda los datos de pago por aquí.')),T('Save your order number to track it 📦','Guarde su número de apartado para rastrearlo 📦'));
+ opts([[T('📦 Track this order','📦 Rastrear este apartado'),()=>status(S.f)],...END()])})})};
+ if(bag){await bot(T('This item is one size 👌','Esta prenda es talla única 👌'));return color(T('One size','Talla única'))}
+ await bot(T('Which size?','¿Qué talla?'));opts(['S','M','L','XL'],color)})}
+async function rastrear(){await bot(T('Please type your order number (example: LF-1234) 📦','Escriba su número de apartado (ejemplo: LF-1234) 📦'));opts(S.f?[S.f]:['LF-2048'],v=>status(v))}
+async function status(v){await bot(summary('📦 '+T('Order','Apartado')+' <em>'+esc(v.toUpperCase())+'</em>',[[T('Status','Estado'),T('Confirmed · in transit','Confirmado · en camino')],[T('Arriving on','Llega el'),'[date] '+C()],[T('Pickup','Entrega'),T('Store or shipping','Tienda o envío')+' '+C()]],T('We will message you when it arrives 🎉','Le avisamos por aquí cuando llegue 🎉')));opts(END())}
+async function mayoreo(){await bot(T('🏷️ We have wholesale prices for stores and resellers ','🏷️ Tenemos precios de mayoreo para tiendas y revendedores ')+C(),summary(T('🏷️ Wholesale','🏷️ Mayoreo'),[[T('Minimum order','Pedido mínimo'),C()],[T('Price list','Lista de precios'),C()],[T('Payment','Pago'),C()]],T('A person will send you the price list here.','Una persona le manda la lista de precios por aquí.')));opts(END())}
+async function ubic(){await bot({html:`<div class="card"><svg viewBox="0 0 300 130" style="display:block;width:100%"><rect width="300" height="130" fill="#ece3da"/><path d="M0 40h300M0 95h300M70 0v130M190 0v130" stroke="#fff" stroke-width="9"/><path d="M150 38c-12 0-20 9-20 20 0 15 20 34 20 34s20-19 20-34c0-11-8-20-20-20z" fill="#b9777d"/><circle cx="150" cy="58" r="7" fill="#fff"/><text x="150" y="122" font-size="11" text-anchor="middle" fill="#555" font-family="sans-serif">Map example</text></svg><h4>📍 Lei Fashion México</h4><dl><dt>${T('Address','Dirección')}</dt><dd>Leona Vicario 51D, Centro, Cuauhtémoc, 06020 CDMX</dd><dt>${T('Hours','Horario')}</dt><dd>${T('Thursday','Jueves')} 9:00–17:00<br>${T('Other days','Otros días')} ${C()}</dd></dl></div>`},T('Anything else?','¿Algo más?'));opts(END())}
+async function persona(){await bot(T('👤 Of course! I will connect you with our team.','👤 ¡Claro! Le comunico con nuestro equipo.'),summary('👤 '+T('Request','Solicitud')+' · <em>'+folio('P')+'</em>',[[T('Status','Estado'),T('Waiting','En espera')],[T('Reply','Respuesta'),T('In minutes, during store hours','En minutos, en horario de tienda')]],T('Meanwhile, tell me what you need.','Mientras, cuénteme qué necesita.')));opts(END())}
+const KW=[[/new|arriv|novedad|nuevo|cat[aá]log/i,nuevos],[/preorder|order|apart|reserv|pedido|comprar|buy/i,apartar],[/track|status|rastre|seguim|lleg|LF-/i,rastrear],[/whole|mayoreo|bulk/i,mayoreo],[/where|locat|hour|open|d[oó]nde|ubica|direcci|horario/i,ubic],[/person|human|agent|persona|asesor|hablar/i,persona],[/menu|men[uú]|hi|hello|hola/i,()=>menu(true)]];
+document.getElementById('f').onsubmit=e=>{e.preventDefault();const i=document.getElementById('txt'),v=i.value.trim();if(!v||busy)return;i.value='';qr.innerHTML='';add(esc(v),'u');
+ run(async()=>{if(expect){const f=expect;expect=null;return f(v)}if(/LF-\d+/i.test(v))return status(v.match(/LF-\d+/i)[0]);if(/espa[nñ]ol/i.test(v)){LG='es';return menu()}const k=KW.find(([r])=>r.test(v));if(k)return k[1]();await bot(T("Sorry, I didn't quite get that 🙈 Please choose an option:",'Perdón, no le entendí 🙈 Elija una opción:'));opts(MENU())})};
+reset();
+</script></body></html>
